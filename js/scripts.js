@@ -1,15 +1,20 @@
+function Order(pizza) {
+  this.pizza = pizza;
+  this.currentId = 1;
+}
+
 function Pizza(topping, size, price) {
   this.topping = topping;
   this.size = size;
   this.price = price;
+  
 }
 
 Pizza.prototype.topPriceCalc = function() {
-  let price = this.price;
   this.topping.forEach(function(topping) {
-    price += 1;
+    newPizza.price += 1;
   })
-  return(price)
+  return(this.price)
 }
 
 Pizza.prototype.sizePriceCalc = function() {
