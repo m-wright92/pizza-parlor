@@ -1,3 +1,4 @@
+// Business logic
 function Order() {
   this.pizzas = {};
   this.currentId = 0;
@@ -7,7 +8,6 @@ function Pizza(topping, size, price) {
   this.topping = topping;
   this.size = size;
   this.price = price;
-  
 };
 
 Order.prototype.addPizza = function(pizza) {
@@ -39,3 +39,16 @@ Pizza.prototype.sizePriceCalc = function() {
   }
   return(this.price);
 };
+
+// UI Logic
+
+$(document).ready(function() {
+  $("form").submit(function(event){
+    event.preventDefault();
+  })
+
+  let toppings = [];
+  let size = "";
+  
+})
+
