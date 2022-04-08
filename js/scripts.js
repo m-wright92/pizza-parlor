@@ -1,21 +1,31 @@
-function Order(pizza) {
-  this.pizza = pizza;
-  this.currentId = 1;
-}
+function Order() {
+  this.pizzas = {};
+  this.currentId = 0;
+};
 
 function Pizza(topping, size, price) {
   this.topping = topping;
   this.size = size;
   this.price = price;
   
-}
+};
+
+Order.prototype.addPizza = function(pizza) {
+  pizza.id = this.assignId();
+  this.pizzas[pizza.id] = pizza;
+};
+
+Order.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
+};
 
 Pizza.prototype.topPriceCalc = function() {
   this.topping.forEach(function(topping) {
     newPizza.price += 1;
   })
   return(this.price)
-}
+};
 
 Pizza.prototype.sizePriceCalc = function() {
   if(this.size === "large") {
@@ -28,4 +38,4 @@ Pizza.prototype.sizePriceCalc = function() {
     this.price += 10;
   }
   return(this.price);
-}
+};

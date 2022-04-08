@@ -29,8 +29,20 @@ Code: newOrder = new Order("Pizza1);
 Expected Output: Order {pizza: 'Pizza1'}
 
 
+Describe: Order.prototype.addPizza();
+
+Test: "This will add a pizza object to the order"
+Code: newPizza = new Pizza(['peperoni', 'jalapeno', 'olives'], "large", 0);
+      newOrder = new Order();
+      newOrder.addPizza(newPizza);
+      newOrder;
+Expected Output: pizzas: {1: Pizza}
+
+
 Describe: Order.prototype.assignId();
 
 Test: "This will give an ID for pizzas"
-Code: newOrder = new Order("Pizza1);
+Code: newOrder = new Order("Pizza1");
+      Pizza1.assignID();
       newOrder;
+Expected Output: {pizzas: {...}m currentId1}
