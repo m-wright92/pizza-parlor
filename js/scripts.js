@@ -1,11 +1,21 @@
-function Pizza(topping, size) {
+function Pizza(topping, size, price) {
   this.topping = topping;
   this.size = size;
+  this.price = price;
 }
 
-Pizza.prototype.priceCalc = function() {
+Pizza.prototype.topPriceCalc = function() {
   let price = 0;
   this.topping.forEach(function(topping) {
-    console.log(price += 1)
+    price += 1
   })
+  console.log(price)
+}
+
+Pizza.prototype.sizePriceCalc = function() {
+  let price;
+  if(this.size === "large") {
+    price = 20;
+  }
+  console.log(price);
 }
