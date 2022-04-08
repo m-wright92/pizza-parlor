@@ -43,12 +43,27 @@ Pizza.prototype.sizePriceCalc = function() {
 // UI Logic
 
 $(document).ready(function() {
-  $("form").submit(function(event){
+  $("form").submit(function(event) {
     event.preventDefault();
   })
-
+  let size = $("#size-select").val();
   let toppings = [];
-  let size = "";
+  let top1 = $("#meat1").val();
+  let top2 = $("#meat2").val();
+  let top3 = $("#meat3").val();
+  let top4 = $("#veg1").val();
+  let top5 = $("#veg2").val();
+  let top6 = $("#veg6").val();
+
+  $("select").change(function() {
+    $(this).nextAll('select:first:disabled').prop('disabled',false)
+  })
   
+  // $("form").submit(function() {
+  //   let newOrder = new Order();
+  //   if(top1 > 1) {
+  //     toppings.push(top1);
+  //   }else if(top2 )
+  // })
 })
 

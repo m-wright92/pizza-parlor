@@ -30,25 +30,45 @@
         <small>*Cheese is included in price, each extra topping adds $1 to total.</small>
         <div id="meats">
           <p><b>Meats</b></p>
-          <input type="checkbox" id="meat1" name="meat" value="chicken">
-          <label for="meat1">Chicken</label><br>
-          <input type="checkbox" id="meat2" name="meat" value="peperoni">
-          <label for="meat2">Peperoni</label><br>
-          <input type="checkbox" id="meat3" name="meat" value="sausage">
-          <label for="meat3">Sausage</label><br><br>
+          <select id="meat1">
+            <option value="1">None</option>
+            <option value="2">Chicken</option>
+            <option value="3">Peperoni</option>
+            <option value="4">Sausage</option>
+          </select>
+          <select id="meat2" disabled>
+            <option value="1">None</option>
+            <option value="2">Chicken</option>
+            <option value="3">Peperoni</option>
+            <option value="4">Sausage</option>
+          </select>
+          <select id="meat3" disabled>
+            <option value="1">None</option>
+            <option value="2">Chicken</option>
+            <option value="3">Peperoni</option>
+            <option value="4">Sausage</option>
+          </select>
         </div>
         <div id="veggies">
           <p><b>Veggies</b></p>
-          <input type="checkbox" id="veg1" name="veg" value="mushrooms">
-          <label for="veg1">Mushrooms</label><br>
-          <input type="checkbox" id="veg2" name="veg" value="olives">
-          <label for="veg1">Olives</label><br>
-          <input type="checkbox" id="veg3" name="veg" value="onions">
-          <label for="veg1">Onions</label><br>
-          <input type="checkbox" id="veg4" name="veg" value="jalapeno">
-          <label for="veg1">Jalapeno</label><br>
-          <input type="checkbox" id="veg5" name="veg" value="garlic">
-          <label for="veg1">Garlic</label><br><br>
+          <select id="veg1">
+            <option value="1">None</option>
+            <option value="2">Mushrooms</option>
+            <option value="3">Onions</option>
+            <option value="4">Jalapenos</option>
+          </select>
+          <select id="veg2" disabled>
+            <option value="1">None</option>
+            <option value="2">Mushrooms</option>
+            <option value="3">Onions</option>
+            <option value="4">Jalapenos</option>
+          </select>
+          <select id="veg3" disabled>
+            <option value="1">None</option>
+            <option value="2">Mushrooms</option>
+            <option value="3">Onions</option>
+            <option value="4">Jalapenos</option>
+          </select>
         </div>
         <input type="submit" value="Submit">
       </form>
