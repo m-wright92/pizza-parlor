@@ -46,24 +46,41 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
   })
-  let size = $("#size-select").val();
-  let toppings = [];
-  let top1 = $("#meat1").val();
-  let top2 = $("#meat2").val();
-  let top3 = $("#meat3").val();
-  let top4 = $("#veg1").val();
-  let top5 = $("#veg2").val();
-  let top6 = $("#veg6").val();
+  let newOrder = new Order();
+  
 
   $("select").change(function() {
     $(this).nextAll('select:first:disabled').prop('disabled',false)
   })
   
-  // $("form").submit(function() {
-  //   let newOrder = new Order();
-  //   if(top1 > 1) {
-  //     toppings.push(top1);
-  //   }else if(top2 )
-  // })
-})
+  $("form").submit(function() {
+    let size = $("#size-select").val();
+    let toppings = [];
+    let top1 = $("#meat1").val();
+    let top2 = $("#meat2").val();
+    let top3 = $("#meat3").val();
+    let top4 = $("#veg1").val();
+    let top5 = $("#veg2").val();
+    let top6 = $("#veg3").val();
+    if(top1 != 1) {
+      toppings.push(top1);
+      if(top2 != 1) {
+        toppings.push(top2);
+        if(top3 != 1) {
+          toppings.push(top3);
+        }
+      }
+    }
+    if(top4 != 1) {
+      toppings.push(top4);
+      if(top5 != 1) {
+        toppings.push(top5);
+        if(top6 != 1) {
+        toppings.push(top5);
+        }
+      }
+    }
+    let newPizza = new Pizza(toppings, size, 0);
 
+  })
+})
