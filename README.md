@@ -1,3 +1,36 @@
+# Pizza Parlor
+
+#### By Mike Wright
+
+#### A basic page to build a pizza and view the price.
+
+## Technologies Used
+
+* HTML
+* CSS
+* JavaScript
+ 
+ ## Description
+
+ This project is an exploration of JavaScript objects. It allows you to build a pizza, select the size and add up to 6 toppings, then it provides the price based off those factors.
+
+ ## Setup Instructions
+
+ * Clone repository from https://github.com/m-wright92/pizza-parlor
+ * Navigate to the top level of the portfolio directory
+ * Open index.html in your web browser (it has only been tested in Google Chrome)
+
+ ## Known Bugs
+If the user makes a selection in the first selector of meat or veggies, then selects another in the 2nd or 3rd place, if they set any selector before it back to "none" it will not properly calculate topping price.
+
+ 
+
+ ## License
+
+ MIT
+
+ Copyright (c) 04-08-2022 Mike Wright
+
 <!-- Tests -->
 Describe: Pizza(topping, size)
 

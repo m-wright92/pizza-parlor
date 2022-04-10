@@ -21,18 +21,19 @@ Order.prototype.assignId = function() {
 };
 
 Pizza.prototype.topPriceCalc = function() {
+  let cost = 0;
   this.topping.forEach(function(topping) {
-    newPizza.price += 1;
+    cost += 1;
   })
-  return(this.price)
+  return(this.price += cost)
 };
 
 Pizza.prototype.sizePriceCalc = function() {
-  if(this.size === "large") {
+  if(this.size === "Large") {
     this.price += 20;
-  }else if(this.size === "medium") {
+  }else if(this.size === "Medium") {
     this.price += 15;
-  }else if(this.size === "small") {
+  }else if(this.size === "Small") {
     this.price += 12;
   }else {
     this.price += 10;
@@ -47,7 +48,12 @@ $(document).ready(function() {
     event.preventDefault();
   })
   let newOrder = new Order();
-  
+
+  $("select#size-select").change(function() {
+    let size = $("#size-select").val();
+    let img = "img/" + size + ".jpg" 
+    $("img#za-size").attr('src', img);
+  })
 
   $("select").change(function() {
     $(this).nextAll('select:first:disabled').prop('disabled',false)
@@ -81,6 +87,9 @@ $(document).ready(function() {
       }
     }
     let newPizza = new Pizza(toppings, size, 0);
-
+    newPizza.sizePriceCalc();
+    newPizza.topPriceCalc();
+    newOrder.addPizza(newPizza);
+    $("#total").text("$" + newPizza.price);
   })
 })
