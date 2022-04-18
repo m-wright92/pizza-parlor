@@ -35,24 +35,29 @@ If the user makes a selection in the first selector of meat or veggies, then sel
 Describe: Pizza(topping, size)
 
 Test: "It should return a pizza object with an array of toppings and size"
-Code: newPizza = new Pizza(['peperoni', 'jalapeno', 'olives'], "large");
-Expected output: pizza {toppings: ['peperoni', 'jalapeno', 'olives'], size:'large'}
+Code: newPizza = new Pizza(['peperoni', 'jalapeno', 'onions'], "large");
+Expected output: pizza {toppings: ['peperoni', 'jalapeno', 'onions'], size:'large'}
 
 
 Describe: Pizza.prototype.topPriceCalc()
 
 Test: "It should return a value based off # of toppings in the pizza object array"
-Code: newPizza = new Pizza(['peperoni', 'jalapeno', 'olives'],   "large", 0)
+Code: newPizza = new Pizza(['peperoni', 'jalapeno', 'onions'],   "personal", 0)
       newPizza.topPriceCalc();
-Expected output: 3
+Expected output: 13
 
 
 Describe: Pizza.prototype.sizePriceCalc()
 
 Test: "It should return a value based off size of pizza"
-Code: newPizza = new Pizza(['peperoni', 'jalapeno', 'olives'], "large", 0);
+Code: newPizza = new Pizza(['peperoni', 'jalapeno', 'onions'], "large", 0);
       newPizza.sizePriceCalc();
-Expected output: 20
+Expected output: 23
+
+Test: "It should return a value based off size of pizza"
+Code: newPizza = new Pizza(['peperoni', 'jalapeno', 'onions'], "small", 0);
+      newPizza.sizePriceCalc();
+Expected output: 15
 
 Describe: Order();
 

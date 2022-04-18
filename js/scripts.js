@@ -22,7 +22,7 @@ Order.prototype.assignId = function() {
 
 Pizza.prototype.topPriceCalc = function() {
   let cost = 0;
-  this.topping.forEach(function(topping) {
+  this.topping.forEach(function() {
     cost += 1;
   })
   return(this.price += cost)
